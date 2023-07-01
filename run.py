@@ -44,32 +44,44 @@ def welcome():
 welcome()
 
 def choice_continent():
-
+   # Function to get the user's choice for a continent.
     while True:
         try:
+             # Use 'input' to get user input and 'int' to convert it to an integer.
             choice_number = int(input("Please select one continent from the following options: \n\n 1: American \n 2: Asian \n 3: Europe \n\n Please enter a number between 1 and 3: "))
+            
+             # Check if the input is within the valid range (1 to 3).
             if choice_number >= 1 and choice_number <= 3:
-                break
+                break # Exit the loop if the input is valid.
             else:
+                 # If the input is not valid, inform the user and prompt again.
                 print('Ops! That was not a valid number. try again\n\n')     
         except ValueError:
             print('Please enter a number between 1 and 3.\n\n')
     
-    if choice_number == 1:
-          return random.choice(american_countries.american_countries)
+    # Return the valid choice number.
+    return choice_number
+               
+ # Call the function to get the user's choice and store it in 'option_number'.   
+option_number = choice_continent()
 
-    elif choice_number == 2:
+def generate_word(number):
+     # Function to generate a random country name based on the selected continent number.
+           
+    # If the number is 1, choose a random country from the 'american_countries' list and return it.
+    if number == 1:
+          return random.choice(american_countries.american_countries)
+       
+     # If the number is 2, choose a random country from the 'asian_countries' list and return it.
+    elif number == 2:
         return random.choice(asian_countries.asian_countries)
     
-
-    elif choice_number == 3:
+     # If the number is 3, choose a random country from the 'european_countries' list and return it.
+    elif number == 3:
         return random.choice(european_countries.european_countries)
-               
-    
-choice_continent()
 
-def generate_word():
-    pass
+# Call the 'generate_word' function that will return random country.
+generate_word(option_number)
 
 def generate_blank_space():
     pass
