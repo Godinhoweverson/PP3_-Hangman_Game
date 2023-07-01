@@ -32,3 +32,19 @@ def welcome():
 welcome()
 
 def choice_continent():
+    pass
+
+def generate_word():
+    pass
+
+def generate_blank_space():
+    pass
+
+def check_letter():
+    pass
+
+def win_game():
+    pass
+
+def lost_game():
+    pass
