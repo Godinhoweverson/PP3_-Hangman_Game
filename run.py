@@ -81,10 +81,16 @@ def generate_word(number):
         return random.choice(european_countries.european_countries)
 
 # Call the 'generate_word' function that will return random country.
-generate_word(option_number)
+word = generate_word(option_number)
 
-def generate_blank_space():
-    pass
+def generate_blank_space(item):
+     # Function to generate a string of blank spaces based on the length of generate word.
+
+    letter_blank = '- ' * len(item)  # Create a string of '-' characters repeated for the length of the item.
+    print(letter_blank)  # Print the generated string of blank spaces.
+
+# Call the function and pass the 'word' variable that is the return of generate_word's function.
+generate_blank_space(word)
 
 def check_letter():
     pass
