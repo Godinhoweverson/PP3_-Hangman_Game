@@ -1,4 +1,4 @@
-countries = [
+european_countries = [
     'Albania',
     'Andorra',
     'Armenia',

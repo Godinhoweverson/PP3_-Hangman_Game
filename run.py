@@ -1,6 +1,18 @@
 # Import the 'random' module to use later for selecting a random country.
 import random           
 
+
+# Importing the 'american_countries' module.
+import american_countries
+
+# Importing the 'asian_countries' module.
+import asian_countries
+
+# Importing the 'european_countries' module.
+import european_countries
+
+
+
 # variables
 score_correct_letter = 0
 score_wrong_letter = 0
@@ -32,6 +44,7 @@ def welcome():
 welcome()
 
 def choice_continent():
+    
     pass
 
 def generate_word():
