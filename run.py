@@ -69,15 +69,15 @@ def generate_word(number):
            
     # If the number is 1, choose a random country from the 'american_countries' list and return it.
     if number == 1:
-          return random.choice(american_countries.american_countries)
+          return random.choice(american_countries.american_countries).upper()
        
      # If the number is 2, choose a random country from the 'asian_countries' list and return it.
     elif number == 2:
-        return random.choice(asian_countries.asian_countries)
+        return random.choice(asian_countries.asian_countries).upper()
     
      # If the number is 3, choose a random country from the 'european_countries' list and return it.
     elif number == 3:
-        return random.choice(european_countries.european_countries)
+        return random.choice(european_countries.european_countries).upper()
 
 # Call the 'generate_word' function that will return random country.
 word = generate_word(option_number)
@@ -102,6 +102,7 @@ def check_letter(word):
             print('voce acertou')
             print(letter)
             score_correct_letter =+ 1
+            print(score_correct_letter)
         else:
             print('voce errou')
             score_wrong_letter -= 1
