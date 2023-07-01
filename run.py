@@ -83,32 +83,34 @@ def generate_word(number):
 word = generate_word(option_number)
 print(word)
 
-def generate_blank_space(item):
-     # Function to generate a string of blank spaces based on the length of generate word.
-
-    letter_blank = '- ' * len(item)  # Create a string of '-' characters repeated for the length of the item.
-    print(letter_blank)  # Print the generated string of blank spaces.
-
-# Call the function and pass the 'word' variable that is the return of generate_word's function.
-generate_blank_space(word)
 
 def check_letter(word):
-    score_correct_letter = 0
-    score_wrong_letter = 6
+    correct_letter = 0  # Counter for the number of correctly guessed letters
+    wrong_letter = 0  # Counter for the number of incorrectly guessed letters
+    correct = ''  # String to store correctly guessed letters
+    wrong = ''  # String to store incorrectly guessed letters
 
-    while score_correct_letter != 7 and score_wrong_letter != 0:
-        letter = input('Please enter a letter: ').upper()
+    while correct_letter < len(word) and wrong_letter != 6:  # Continue until all letters are guessed correctly or 6 wrong guesses are made
+        display = ''
+        for letter in word:
+            if letter in correct:
+                display += f'{letter}'  # Display correctly guessed letters
+            else:
+                display += '_ '  # Display underscores for unguessed letters
+        print(display)
+       
+        letter = input('Please enter a letter: ').upper()  # Prompt the user to enter a letter (converted to uppercase)
         if letter in word:
-            print('voce acertou')
-            print(letter)
-            score_correct_letter =+ 1
-            print(score_correct_letter)
+            print('You got the letter right!')  # The guessed letter is in the word
+            correct += letter  # Add the correctly guessed letter to the 'correct' string
+            print(correct)  # Display the correctly guessed letters
+            correct_letter += 1  # Increment the count of correct guesses
         else:
-            print('voce errou')
-            score_wrong_letter -= 1
+            print('You got the letter wrong!')  # The guessed letter is not in the word
+            wrong += letter  # Add the incorrectly guessed letter to the 'wrong' string
+            wrong_letter += 1  # Increment the count of wrong guesses
 
-
-check_letter(word)
+check_letter(word)  # To call the function, the parameter "word" is used. The word is a randomly selected country defined by the generate_word function.
 
 def win_game():
     pass
