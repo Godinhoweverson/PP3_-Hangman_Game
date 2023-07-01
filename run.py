@@ -44,8 +44,29 @@ def welcome():
 welcome()
 
 def choice_continent():
+
+    while True:
+        try:
+            choice_number = int(input("Please select one continent from the following options: \n\n 1: American \n 2: Asian \n 3: Europe \n\n Please enter a number between 1 and 3: "))
+            if choice_number >= 1 and choice_number <= 3:
+                break
+            else:
+                print('Ops! That was not a valid number. try again\n\n')     
+        except ValueError:
+            print('Please enter a number between 1 and 3.\n\n')
     
-    pass
+    if choice_number == 1:
+          return random.choice(american_countries.american_countries)
+
+    elif choice_number == 2:
+        return random.choice(asian_countries.asian_countries)
+    
+
+    elif choice_number == 3:
+        return random.choice(european_countries.european_countries)
+               
+    
+choice_continent()
 
 def generate_word():
     pass
