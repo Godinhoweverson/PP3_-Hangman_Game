@@ -14,8 +14,7 @@ import european_countries
 
 
 # variables
-score_correct_letter = 0
-score_wrong_letter = 0
+
 correct_letter = ''
 wrong_letter = ''
 
@@ -82,6 +81,7 @@ def generate_word(number):
 
 # Call the 'generate_word' function that will return random country.
 word = generate_word(option_number)
+print(word)
 
 def generate_blank_space(item):
      # Function to generate a string of blank spaces based on the length of generate word.
@@ -92,8 +92,22 @@ def generate_blank_space(item):
 # Call the function and pass the 'word' variable that is the return of generate_word's function.
 generate_blank_space(word)
 
-def check_letter():
-    pass
+def check_letter(word):
+    score_correct_letter = 0
+    score_wrong_letter = 6
+
+    while score_correct_letter != 7 and score_wrong_letter != 0:
+        letter = input('Please enter a letter: ').upper()
+        if letter in word:
+            print('voce acertou')
+            print(letter)
+            score_correct_letter =+ 1
+        else:
+            print('voce errou')
+            score_wrong_letter -= 1
+
+
+check_letter(word)
 
 def win_game():
     pass
