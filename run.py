@@ -83,6 +83,21 @@ def generate_word(number):
 word = generate_word(option_number)
 print(word)
 
+def single_letter(letter):
+"This function enables the player to type only one letter at a time. If the player attempts to type two or more letters, they will not be able to proceed until they have typed a single letter. This function can be called within the check_letter()
+      while True:
+        try:
+            letter = input('Please enter a letter: ').upper()
+            if len(letter) == 1:
+                break 
+            else:
+               
+                print('Please enter one letter at a time. Try again!\n\n')     
+        except ValueError:
+            print('type one letter.\n\n')
+    
+    
+      return letter
 
 def check_letter(word):
     correct_letter = 0  # Counter for the number of correctly guessed letters
@@ -90,7 +105,7 @@ def check_letter(word):
     correct = ''  # String to store correctly guessed letters
     wrong = ''  # String to store incorrectly guessed letters
 
-    while correct_letter < len(word) and wrong_letter != 6:  # Continue until all letters are guessed correctly or 6 wrong guesses are made
+    while correct_letter != len(word) and wrong_letter != 6:  # Continue until all letters are guessed correctly or 6 wrong guesses are made
         display = ''
         for letter in word:
             if letter in correct:
@@ -99,7 +114,7 @@ def check_letter(word):
                 display += '_ '  # Display underscores for unguessed letters
         print(display)
        
-        letter = input('Please enter a letter: ').upper()  # Prompt the user to enter a letter (converted to uppercase)
+        letter = single_letter(letter)
         if letter in word:
             print('You got the letter right!')  # The guessed letter is in the word
             correct += letter  # Add the correctly guessed letter to the 'correct' string
@@ -111,6 +126,11 @@ def check_letter(word):
             wrong_letter += 1  # Increment the count of wrong guesses
 
 check_letter(word)  # To call the function, the parameter "word" is used. The word is a randomly selected country defined by the generate_word function.
+
+
+                  
+
+            
 
 def win_game():
     pass
