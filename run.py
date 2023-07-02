@@ -84,7 +84,9 @@ word = generate_word(option_number)
 print(word)
 
 def single_letter(letter):
-"This function enables the player to type only one letter at a time. If the player attempts to type two or more letters, they will not be able to proceed until they have typed a single letter. This function can be called within the check_letter()
+#This function enables the player to type only one letter at a time. 
+# If the player attempts to type two or more letters, they will not be able to proceed until they have typed a single letter. 
+# This function can be called within the check_letter()
       while True:
         try:
             letter = input('Please enter a letter: ').upper()
@@ -100,12 +102,12 @@ def single_letter(letter):
       return letter
 
 def check_letter(word):
-    correct_letter = 0  # Counter for the number of correctly guessed letters
-    wrong_letter = 0  # Counter for the number of incorrectly guessed letters
+    correct_letter_count = 0  # Counter for the number of correctly guessed letters
+    wrong_letter_count = 0  # Counter for the number of incorrectly guessed letters
     correct = ''  # String to store correctly guessed letters
     wrong = ''  # String to store incorrectly guessed letters
 
-    while correct_letter != len(word) and wrong_letter != 6:  # Continue until all letters are guessed correctly or 6 wrong guesses are made
+    while correct_letter_count != len(word.replace(' ', '')) and wrong_letter_count != 6:  # Continue until all letters are guessed correctly or 6 wrong guesses are made
         display = ''
         for letter in word:
             if letter in correct:
@@ -115,15 +117,20 @@ def check_letter(word):
         print(display)
        
         letter = single_letter(letter)
+
+        if letter in correct + wrong:
+            print('You have attempted this letter')
+            continue
+
         if letter in word:
             print('You got the letter right!')  # The guessed letter is in the word
             correct += letter  # Add the correctly guessed letter to the 'correct' string
             print(correct)  # Display the correctly guessed letters
-            correct_letter += 1  # Increment the count of correct guesses
+            correct_letter_count += word.count(letter)  # Increment the count of correct guesses
         else:
             print('You got the letter wrong!')  # The guessed letter is not in the word
             wrong += letter  # Add the incorrectly guessed letter to the 'wrong' string
-            wrong_letter += 1  # Increment the count of wrong guesses
+            wrong_letter_count += 1  # Increment the count of wrong guesses
 
 check_letter(word)  # To call the function, the parameter "word" is used. The word is a randomly selected country defined by the generate_word function.
 
