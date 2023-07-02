@@ -11,12 +11,12 @@ import asian_countries
 # Importing the 'european_countries' module.
 import european_countries
 
+import hangman_stages
 
 
 # variables
+hangman_stages = hangman_stages
 
-correct_letter = ''
-wrong_letter = ''
 
 # Function to display the welcome message and instructions for the Hangman game.
 def welcome():
@@ -101,13 +101,14 @@ def single_letter(letter):
     
       return letter
 
+
 def check_letter(word):
     correct_letter_count = 0  # Counter for the number of correctly guessed letters
-    wrong_letter_count = 0  # Counter for the number of incorrectly guessed letters
+    wrong_letter_count = 6  # Counter for the number of incorrectly guessed letters
     correct = ''  # String to store correctly guessed letters
     wrong = ''  # String to store incorrectly guessed letters
 
-    while correct_letter_count != len(word.replace(' ', '')) and wrong_letter_count != 6:  # Continue until all letters are guessed correctly or 6 wrong guesses are made
+    while correct_letter_count != len(word.replace(' ', '')) and wrong_letter_count != 0:  # Continue until all letters are guessed correctly or 6 wrong guesses are made
         display = ''
         for letter in word:
             if letter in correct:
@@ -130,17 +131,14 @@ def check_letter(word):
         else:
             print('You got the letter wrong!')  # The guessed letter is not in the word
             wrong += letter  # Add the incorrectly guessed letter to the 'wrong' string
-            wrong_letter_count += 1  # Increment the count of wrong guesses
+            wrong_letter_count -= 1  # Increment the count of wrong guesses
+            print(hangman_stages.stages[wrong_letter_count])
+            if wrong_letter_count == 0:
+                print("You lost the game. Better luck next time!")
 
 check_letter(word)  # To call the function, the parameter "word" is used. The word is a randomly selected country defined by the generate_word function.
 
 
-                  
-
-            
 
 def win_game():
-    pass
-
-def lost_game():
     pass
