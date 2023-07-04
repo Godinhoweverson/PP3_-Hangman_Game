@@ -38,7 +38,6 @@ def welcome():
     print("\nYour goal is to guess the name of a country within the chosen continent.")
     print("\nTry to guess the country before the hangman is complete. Let's begin!")
 
-# Call the 'welcome()' function to start the game.
 welcome()
 
 def choice_continent():
@@ -100,6 +99,15 @@ def single_letter(letter):
     
       return letter
 
+def play_again():
+    print("Would you like to play again?\n\n")
+    repeat_game = input("Y or N:  ").upper()
+    if repeat_game == 'Y':
+        print("Let's start!\n")
+        word = generate_word(option_number)
+        check_letter(word)
+    else:
+        print("Thank you, see you next time!\n")
 
 def check_letter(word):
     correct_letter_count = 0  # Counter for the number of correctly guessed letters
@@ -130,8 +138,10 @@ def check_letter(word):
             print(correct)  # Display the correctly guessed letters
             correct_letter_count += word.count(letter)  # Increment the count of correct guesses
             if correct_letter_count == len(word.replace(' ', '')):
-                print( "You won the game! Congratulations!")
-                print(f"The country is {word}")
+                print( "You won the game! Congratulations!\n")
+                print(f"The country is {word}\n\n")
+                play_again()
+
             
         else:
             print('You got the letter wrong!')  # The guessed letter is not in the word
@@ -139,9 +149,12 @@ def check_letter(word):
             wrong_letter_count -= 1  # Increment the count of wrong guesses
             print(hangman_stages.stages[wrong_letter_count])
             if wrong_letter_count == 0:
-                print("You lost the game. Better luck next time!")
+                print("You lost the game. Better luck next time!\n\n")
+                play_again()
+
 
 check_letter(word)  # To call the function, the parameter "word" is used. The word is a randomly selected country defined by the generate_word function.
+
 
 
 
