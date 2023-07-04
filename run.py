@@ -13,9 +13,6 @@ import european_countries
 import hangman_stages
 
 
-# variables
-hangman_stages = hangman_stages
-
 
 # Function to display the welcome message and instructions for the Hangman game.
 def welcome():
@@ -81,7 +78,7 @@ def generate_word(number):
 word = generate_word(option_number)
 print(word)
 
-def single_letter(letter):
+def get_single_letter(letter):
 #This function enables the player to type only one letter at a time. 
 # If the player attempts to type two or more letters, they will not be able to proceed until they have typed a single letter. 
 # This function can be called within the check_letter()
@@ -132,7 +129,7 @@ def check_letter(word):
                 display += '_ '  # Display underscores for unguessed letters
         print(display)
        
-        letter = single_letter(letter)
+        letter = get_single_letter(letter)
 
         if letter in correct + wrong:
             print('You have attempted this letter')
@@ -143,7 +140,7 @@ def check_letter(word):
         if letter in word:
             print('You got the letter right!')  # The guessed letter is in the word
             correct += letter  # Add the correctly guessed letter to the 'correct' string
-            print(correct)  # Display the correctly guessed letters
+            print(f"You have entered the following letters:  {correct + wrong}")  # Display the correctly guessed letters
             correct_letter_count += word.count(letter)  # Increment the count of correct guesses
             if correct_letter_count == len(word.replace(' ', '')):
                 print( "You won the game! Congratulations!\n")
@@ -154,9 +151,11 @@ def check_letter(word):
         else:
             print('You got the letter wrong!')  # The guessed letter is not in the word
             wrong += letter  # Add the incorrectly guessed letter to the 'wrong' string
+            print(f"You have entered the following letters:  {correct + wrong}")
             wrong_letter_count -= 1  # Increment the count of wrong guesses
             print(hangman_stages.stages[wrong_letter_count])
             if wrong_letter_count == 0:
+                print(f"The country was {word}\n\n")
                 print("You lost the game. Better luck next time!\n\n")
                 play_again()
 
