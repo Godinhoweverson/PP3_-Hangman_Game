@@ -1,7 +1,6 @@
 # Import the 'random' module to use later for selecting a random country.
 import random           
 
-
 # Importing the 'american_countries' module.
 import american_countries
 
@@ -121,6 +120,8 @@ def check_letter(word):
 
         if letter in correct + wrong:
             print('You have attempted this letter')
+            print('Please, try again!')
+
             continue
 
         if letter in word:
@@ -128,6 +129,10 @@ def check_letter(word):
             correct += letter  # Add the correctly guessed letter to the 'correct' string
             print(correct)  # Display the correctly guessed letters
             correct_letter_count += word.count(letter)  # Increment the count of correct guesses
+            if correct_letter_count == len(word.replace(' ', '')):
+                print( "You won the game! Congratulations!")
+                print(f"The country is {word}")
+            
         else:
             print('You got the letter wrong!')  # The guessed letter is not in the word
             wrong += letter  # Add the incorrectly guessed letter to the 'wrong' string
@@ -140,5 +145,5 @@ check_letter(word)  # To call the function, the parameter "word" is used. The wo
 
 
 
-def win_game():
-    pass
+
+    
