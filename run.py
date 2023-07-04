@@ -87,7 +87,7 @@ def single_letter(letter):
 # This function can be called within the check_letter()
       while True:
         try:
-            letter = input('Please enter a letter: ').upper()
+            letter = input('Please enter a letter: \n').upper()
             if len(letter) == 1:
                 break 
             else:
@@ -100,14 +100,22 @@ def single_letter(letter):
       return letter
 
 def play_again():
-    print("Would you like to play again?\n\n")
-    repeat_game = input("Y or N:  ").upper()
-    if repeat_game == 'Y':
-        print("Let's start!\n")
-        word = generate_word(option_number)
-        check_letter(word)
-    else:
-        print("Thank you, see you next time!\n")
+    while True:
+        try:
+            print("Would you like to play again?\n\n")
+            repeat_game = input("Y or N:  ").upper()
+            if repeat_game == 'Y':
+                print("Let's start!\n")
+                choice_continent()
+                word = generate_word(option_number)
+                check_letter(word)
+            elif repeat_game == 'N':
+                print("Thank you, see you next time!\n")
+                break
+            else:
+                print('Please, Y or N.\n\n')
+        except ValueError:
+            print('Please, Y or N\n\n')
 
 def check_letter(word):
     correct_letter_count = 0  # Counter for the number of correctly guessed letters
