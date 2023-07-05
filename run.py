@@ -1,5 +1,5 @@
-# Import the 'random' module to use later for selecting a random country.
-import random           
+import random   # Import the 'random' module 
+# to use later for selecting a random country.
 
 # Importing the 'american_countries' module.
 import american_countries
@@ -13,10 +13,10 @@ import european_countries
 # Importing the 'hangman_stages' to use when the letter is wrong.
 import hangman_stages
 
-
-
 # Function to display the welcome message and instructions for the Hangman game.
 def welcome():
+
+
      # ASCII art for the word "Hangman".
     hangman_art = '''
      _    _                                         
@@ -29,14 +29,15 @@ def welcome():
                         |___/    
     Welcome to Hangman!
     '''
-
     print(hangman_art)
     # Display the game instructions for the player.
     print("\nYou have three options of continents to choose from.")
     print("\nYour goal is to guess the name of a country within the chosen continent.")
     print("\nTry to guess the country before the hangman is complete. Let's begin!")
 
+
 welcome()
+
 
 def choice_continent():
    # Function to get the user's choice for a continent.
@@ -56,9 +57,10 @@ def choice_continent():
     
     # Return the valid choice number.
     return choice_number
-               
+
  # Call the function to get the user's choice and store it in 'option_number'.   
 option_number = choice_continent()
+
 
 def generate_word(number):
      # Function to generate a random country name based on the selected continent number.
@@ -139,21 +141,27 @@ def check_letter(word):
             continue
 
         if letter in word:
-            print('You got the letter right!')  # The guessed letter is in the word
-            correct += letter  # Add the correctly guessed letter to the 'correct' string
-            print(f"You have entered the following letters:  {correct + wrong}\n\n")  # Display the correctly guessed letters
-            correct_letter_count += word.count(letter)  # Increment the count of correct guesses
+            # The guessed letter is in the word
+            print('You got the letter right!')  
+             # Add the correctly guessed letter to the 'correct' string
+            correct += letter 
+            # Display the correctly guessed letters
+            print(f"You have entered the following letters:  {correct + wrong}\n\n")  
+            # Increment the count of correct guesses
+            correct_letter_count += word.count(letter)  
             if correct_letter_count == len(word.replace(' ', '')):
                 print( "You won the game! Congratulations!\n")
                 print(f"The country is {word}\n\n")
                 play_again()
-
-            
+    
         else:
-            print('You got the letter wrong!')  # The guessed letter is not in the word
-            wrong += letter  # Add the incorrectly guessed letter to the 'wrong' string
+            # The guessed letter is not in the word
+            print('You got the letter wrong!')  
+             # Add the incorrectly guessed letter to the 'wrong' string
+            wrong += letter 
             print(f"You have entered the following letters:  {correct + wrong}\n\n")
-            wrong_letter_count -= 1  # Increment the count of wrong guesses
+             # Increment the count of wrong guesses
+            wrong_letter_count -= 1 
             print(hangman_stages.stages[wrong_letter_count])
             if wrong_letter_count == 0:
                 print(f"The country was {word}\n\n")
@@ -161,7 +169,9 @@ def check_letter(word):
                 play_again()
 
 
-check_letter(word)  # To call the function, the parameter "word" is used. The word is a randomly selected country defined by the generate_word function.
+check_letter(word)  
+# To call the function, the parameter "word" is used. 
+# The word is a randomly selected country defined by the generate_word function.
 
 
 
