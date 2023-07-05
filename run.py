@@ -10,6 +10,7 @@ import asian_countries
 # Importing the 'european_countries' module.
 import european_countries
 
+# Importing the 'hangman_stages' to use when the letter is wrong.
 import hangman_stages
 
 
@@ -76,7 +77,7 @@ def generate_word(number):
 
 # Call the 'generate_word' function that will return random country.
 word = generate_word(option_number)
-print(word)
+
 
 def get_single_letter(letter):
 #This function enables the player to type only one letter at a time. 
@@ -140,7 +141,7 @@ def check_letter(word):
         if letter in word:
             print('You got the letter right!')  # The guessed letter is in the word
             correct += letter  # Add the correctly guessed letter to the 'correct' string
-            print(f"You have entered the following letters:  {correct + wrong}")  # Display the correctly guessed letters
+            print(f"You have entered the following letters:  {correct + wrong}\n\n")  # Display the correctly guessed letters
             correct_letter_count += word.count(letter)  # Increment the count of correct guesses
             if correct_letter_count == len(word.replace(' ', '')):
                 print( "You won the game! Congratulations!\n")
@@ -151,7 +152,7 @@ def check_letter(word):
         else:
             print('You got the letter wrong!')  # The guessed letter is not in the word
             wrong += letter  # Add the incorrectly guessed letter to the 'wrong' string
-            print(f"You have entered the following letters:  {correct + wrong}")
+            print(f"You have entered the following letters:  {correct + wrong}\n\n")
             wrong_letter_count -= 1  # Increment the count of wrong guesses
             print(hangman_stages.stages[wrong_letter_count])
             if wrong_letter_count == 0:
