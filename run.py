@@ -1,5 +1,6 @@
-import random   # Import the 'random' module 
+import random # Import the 'random' module 
 # to use later for selecting a random country.
+
 
 # Importing the 'american_countries' module.
 import american_countries
@@ -13,69 +14,52 @@ import european_countries
 # Importing the 'hangman_stages' to use when the letter is wrong.
 import hangman_stages
 
-# Function to display the welcome message and instructions for the Hangman game.
-def welcome():
+import hangman_art
 
-
-     # ASCII art for the word "Hangman".
-    hangman_art = '''
-     _    _                                         
-    | |  | |                                        
-    | |__| | __ _ _ __   __ _ _ __ ___   __ _ _ __  
-    |  __  |/ _` | '_ \ / _` | '_ ` _ \ / _` | '_ \ 
-    | |  | | (_| | | | | (_| | | | | | | (_| | | | |
-    |_|  |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|
-                         __/ |                      
-                        |___/    
-    Welcome to Hangman!
-    '''
-    print(hangman_art)
-    # Display the game instructions for the player.
-    print("\nYou have three options of continents to choose from.")
-    print("\nYour goal is to guess the name of a country within the chosen continent.")
-    print("\nTry to guess the country before the hangman is complete. Let's begin!")
-
-
-welcome()
+hangman_art.welcome()
 
 
 def choice_continent():
-   # Function to get the user's choice for a continent.
+    # Function to get the user's choice for a continent.
     while True:
         try:
-             # Use 'input' to get user input and 'int' to convert it to an integer.
+            # Use 'input' to get user input and 'int' to convert it to an integer.
             choice_number = int(input("Please select one continent from the following options: \n\n 1: American \n 2: Asian \n 3: Europe \n\n Please enter a number between 1 and 3: "))
-            
-             # Check if the input is within the valid range (1 to 3).
+            # Check if the input is within the valid range (1 to 3).
             if choice_number >= 1 and choice_number <= 3:
-                break # Exit the loop if the input is valid.
+
+                # Exit the loop if the input is valid.
+                break
+
             else:
-                 # If the input is not valid, inform the user and prompt again.
+                # If the input is not valid, inform the user and prompt again.
                 print('Ops! That was not a valid number. try again\n\n')     
         except ValueError:
             print('Please enter a number between 1 and 3.\n\n')
-    
     # Return the valid choice number.
     return choice_number
 
- # Call the function to get the user's choice and store it in 'option_number'.   
+
+# Call the function to get the user's choice and store it in 'option_number'.   
 option_number = choice_continent()
 
 
 def generate_word(number):
-     # Function to generate a random country name based on the selected continent number.
+    # Function to generate a random country name based on the selected continent number.
            
-    # If the number is 1, choose a random country from the 'american_countries' list and return it.
+    # If the number is 1, choose a random country from 
+    # the 'american_countries' list and return it.
     if number == 1:
-          return random.choice(american_countries.american_countries).upper()
+        return random.choice(american_countries.american_countries).upper()
        
-     # If the number is 2, choose a random country from the 'asian_countries' list and return it.
+    # If the number is 2, choose a random country from the 'asian_countries' list and return it.
     elif number == 2:
         return random.choice(asian_countries.asian_countries).upper()
     
-     # If the number is 3, choose a random country from the 'european_countries' list and return it.
+    # If the number is 3, choose a random country from the 'european_countries' list and return it.
     elif number == 3:
         return random.choice(european_countries.european_countries).upper()
+
 
 # Call the 'generate_word' function that will return random country.
 word = generate_word(option_number)
