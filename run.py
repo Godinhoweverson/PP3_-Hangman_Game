@@ -16,8 +16,6 @@ import hangman_stages
 
 import hangman_art
 
-hangman_art.welcome()
-
 
 def choice_continent():
     # Function to get the user's choice for a continent.
@@ -45,10 +43,6 @@ def choice_continent():
     return choice_number
 
 
-# Call the function to get the user's choice and store it in 'option_number'.
-option_number = choice_continent()
-
-
 def generate_word(number):
     """Function to generate a random country name
     based on the selected continent number.
@@ -62,10 +56,6 @@ def generate_word(number):
 
     elif number == 3:
         return random.choice(european_countries.european_countries).upper()
-
-
-# Call the 'generate_word' function that will return random country.
-word = generate_word(option_number)
 
 
 def get_single_letter(letter):
@@ -93,14 +83,12 @@ def play_again():
             repeat_game = input("Y or N:  ").upper()
             if repeat_game == 'Y':
                 print("Let's start!\n")
-                choice_continent()
-                word = generate_word(option_number)
-                check_letter(word)
+                main()
             elif repeat_game == 'N':
                 print("Thank you, see you next time!\n")
                 break
-            else:
-                print('Please, Y or N.\n\n')
+            # else:
+            #     print('Please, Y or N.\n\n')
         except ValueError:
             print('Please, Y or N\n\n')
 
@@ -115,8 +103,8 @@ def check_letter(word):
     # String to store incorrectly guessed letters
     wrong = ''
 
-    """Continue until all letters are guessed
-    correctly or 6 wrong guesses are made"""
+    # Continue until all letters are guessed
+    # correctly or 6 wrong guesses are made
     while correct_letter_count != len(word.replace(' ', '')) and wrong_letter_count != 0:
         display = ''
         for letter in word:
@@ -166,7 +154,11 @@ def check_letter(word):
                 play_again()
 
 
-check_letter(word)
-# To call the function, the parameter "word" is used.
-# The word is a randomly selected
-# country defined by the generate_word function.
+def main():
+    hangman_art.welcome()
+    option_number = choice_continent()
+    word = generate_word(option_number)
+    check_letter(word)
+
+
+main()
