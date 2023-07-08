@@ -22,18 +22,14 @@ This is a Python terminal game of the classic Hangman game. The game allows play
 <img src="docs/responsive_img/responsive.png" alt="hangman-responsive">
 
 
-## User Experience (UX)
-
-- The website has a simple and clean visual design that is intuitive and easy to understand. The color scheme is minimalistic, primarily using shades of gray and white for the background, with contrasting black text and icons. The use of a limited color palette helps to maintain focus on the game itself.
-
-- The options to choose from (Rock, Paper, and Scissors) are clearly displayed and easily distinguishable. Each option is represented by an icon that accurately represents the corresponding object. The icons are visually appealing and help users quickly identify their choices.
-
 ## Features
 
-## Title page
-- Title page, you will see the title "Rock Paper Scissors" displayed prominently. The title gives a clear indication of the game being played and the button play for access the main page.
-
-<img src="documentation/images/index-image.jpg" alt="title">
+To generate a random word, the player must choose from three continent options. The available choices are:
+1. American
+2. Asia
+3. Europe
+If the player enters a letter or number that is not within the given options, they will be informed that their selection is incorrect. it will then be prompted to try again, this time choosing a number between 1 and 3.
+<img src="docs/features_img/continents_option.png" alt="continents">
 
 ## Reset buttom
 
