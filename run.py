@@ -87,8 +87,7 @@ def play_again():
             elif repeat_game == 'N':
                 print("Thank you, see you next time!\n")
                 break
-            # else:
-            #     print('Please, Y or N.\n\n')
+            
         except ValueError:
             print('Please, Y or N\n\n')
 
