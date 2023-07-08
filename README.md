@@ -56,7 +56,15 @@ To generate a random word, the player must choose from three continent options. 
 
 <img src="docs/features_img/left_leg.png" alt="leg_left">
 
-<img src="docs/features_img/right_arm.png" alt="leg_right">
+<img src="docs/features_img/rigth_leg.png" alt="leg_right">
+
+
+- The player will win the game by typing all the letters correctly. However, if the player types letter incorrectly six times, they will lose the game.
+
+<img src="docs/features_img/win_game.png" alt="win_game">
+
+<img src="docs/features_img/lost_game.png" alt="lost_game">
+
 
 
 
