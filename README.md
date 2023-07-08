@@ -29,7 +29,8 @@ To generate a random word, the player must choose from three continent options. 
 2. Asia
 3. Europe
 
-If the player enters a letter or number that is not within the given options, they will be informed that their selection is incorrect. it will then be prompted to try again, this time choosing a number between 1 and 3.
+- If the player enters a letter or number that is not within the given options, they will be informed that their selection is incorrect. it will then be prompted to try again, this time choosing a number between 1 and 3.
+
 <img src="docs/features_img/continents_option.png" alt="continents">
 
 <img src="docs/features_img/wrong_option.png" alt="wrong_option">
@@ -41,6 +42,21 @@ If the player enters a letter or number that is not within the given options, th
 - When the player correctly guesses a letter, both the letter itself and a message saying 'You got the letter right!' will be displayed.
 
 <img src="docs/features_img/correct_letter.png" alt="correct">
+
+- When the player types a wrong letter, a body part of the hangman will be revealed. They will have six opportunities to make mistakes, and if they exceed that limit, the game will end for the player.
+
+
+<img src="docs/features_img/head.png" alt="head">
+
+<img src="docs/features_img/torso.png" alt="torso">
+
+<img src="docs/features_img/left_arm.png" alt="arm_left">
+
+<img src="docs/features_img/right_arm.png" alt="arm_right">
+
+<img src="docs/features_img/left_leg.png" alt="leg_left">
+
+<img src="docs/features_img/right_arm.png" alt="leg_right">
 
 
 
