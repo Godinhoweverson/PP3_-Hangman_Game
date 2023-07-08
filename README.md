@@ -28,20 +28,33 @@ To generate a random word, the player must choose from three continent options. 
 1. American
 2. Asia
 3. Europe
+
 If the player enters a letter or number that is not within the given options, they will be informed that their selection is incorrect. it will then be prompted to try again, this time choosing a number between 1 and 3.
 <img src="docs/features_img/continents_option.png" alt="continents">
 
-## Reset buttom
+<img src="docs/features_img/wrong_option.png" alt="wrong_option">
 
-- The reset button provides users with the ability to reset the game and start a new round without reloading the entire webpage. It enhances user engagement and encourages replayability by allowing users to quickly and conveniently continue playing the Rock-Paper-Scissors game.
+- The player will be able to determine the number of letters in the word by observing the corresponding number of underscores (_). Additionally, the player can input the first letter of the word
 
-<img src="documentation/images/reset-btn.jpg" alt="reset-btn">
+<img src="docs/features_img/first_letter.png" alt="first_letter">
 
-## Message box
+- When the player correctly guesses a letter, both the letter itself and a message saying 'You got the letter right!' will be displayed.
 
-The message box serves as a visual indicator of the game outcome, providing users with immediate feedback on the result of their game round. Its clear presentation and distinct styling enhance the user experience by effectively communicating the outcome of the Rock-Paper-Scissors game.
+<img src="docs/features_img/correct_letter.png" alt="correct">
 
-<img src="documentation/images/message-image.jpg" alt="message">
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Images
 
