@@ -157,5 +157,5 @@ def main():
     word = generate_word(option_number)
     check_letter(word)
 
-
+    
 main()
