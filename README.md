@@ -19,7 +19,7 @@ This is a Python terminal game of the classic Hangman game. The game allows play
 6. Play again: After winning or losing, you have the option to play again. Choose 'Y' to start a new game or 'N' to exit.
 
 
-<img src="images/responsive" alt="hangman-responsive">
+<img src="docs/responsive_img/responsive.png" alt="hangman-responsive">
 
 
 ## User Experience (UX)
