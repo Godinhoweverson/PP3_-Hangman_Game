@@ -24,10 +24,10 @@ def choice_continent():
             """Use 'input' to get user input and
              'int' to convert it to an integer."""
             choice_number = int(input("Please select one continent from the following options: \n\n"
-                         " 1: American \n"
-                         " 2: Asian \n"
-                         " 3: Europe \n\n"
-                         " Please enter a number between 1 and 3: "))
+                                     " 1: American \n"
+                                     " 2: Asian \n"
+                                     " 3: Europe \n\n"
+                                     " Please enter a number between 1 and 3: "))
             # Check if the input is within the valid range (1 to 3).
             if choice_number >= 1 and choice_number <= 3:
 
@@ -128,8 +128,7 @@ def check_letter(word):
             # Add the correctly guessed letter to the 'correct' string
             correct += letter
             # Display the correctly guessed letters
-            print("You have entered the following letters: \n\n"
-            f"{correct + wrong}\n\n")
+            print("You have entered the following letters: \n\n"f"{correct + wrong}\n\n")
 
             # Increment the count of correct guesses
             correct_letter_count += word.count(letter)
@@ -143,8 +142,7 @@ def check_letter(word):
             print('You got the letter wrong!')
             # Add the incorrectly guessed letter to the 'wrong' string
             wrong += letter
-            print("You have entered the following letters: \n\n"
-            f"{correct + wrong}\n\n")
+            print("You have entered the following letters: \n\n"f"{correct + wrong}\n\n")
             # Increment the count of wrong guesses
             wrong_letter_count -= 1
             print(hangman_stages.stages[wrong_letter_count])
