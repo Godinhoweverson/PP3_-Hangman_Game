@@ -82,7 +82,7 @@ To generate a random word, the player must choose from three continent options. 
 
 ## Tools & Technologies Used
 
-- [Python](https://www.python.org/) was used to create this project..
+- [Python](https://www.python.org/) was used to create this project.
 - [Git](https://git-scm.com) used for version control. (`git add`, `git commit`, `git push`)
 - [GitHub](https://github.com) used for secure online code storage.
 - [Heroku](https://heroku.com) for deployment of the project.
@@ -97,11 +97,12 @@ To generate a random word, the player must choose from three continent options. 
 ## Deployment
 
 #### Steps for deployment
-    - Fork or clone this repository
-    - Create a new Heroku app
-    - Set the buildbacks to Python and Nodsjs in that order
-    - [Link](https://dashboard.heroku.com/apps/pp3-hangman-game-godinho/deploy/github) the Heruku app to the repository
-    - Click on [Deploy](https://pp3-hangman-game-godinho-a0dc3a581f52.herokuapp.com/)
+
+ - Fork or clone this repository
+ - Create a new Heroku app
+ - Set the buildbacks to Python and Nodsjs in that order
+ - [Link](https://dashboard.heroku.com/apps/pp3-hangman-game-godinho/deploy/github) the Heruku app to the repository
+ - Click on [Deploy](https://pp3-hangman-game-godinho-a0dc3a581f52.herokuapp.com/)
 
 
 #### Cloning
