@@ -66,7 +66,7 @@ def get_single_letter(letter):
     while True:
         try:
             letter = input('Please enter a letter: \n').upper()
-            if len(letter) == 1:
+            if len(letter) == 1 and letter.isalpha():
                 break
             else:
 
