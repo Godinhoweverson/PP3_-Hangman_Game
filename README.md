@@ -90,8 +90,8 @@ To generate a random word, the player must choose from three continent options. 
 - [Am I Responsive?](https://ui.dev/amiresponsive) used to show the website on a range of devices.
 
 ## Validor testing
-
-# Test
+- PEP8
+  - No major issues.
 
 
 ## Deployment
