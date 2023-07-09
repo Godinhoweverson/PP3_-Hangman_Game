@@ -29,7 +29,7 @@ To generate a random word, the player must choose from three continent options. 
 2. Asia
 3. Europe
 
-- If the player enters a letter or number that is not within the given options, they will be informed that their selection is incorrect. it will then be prompted to try again, this time choosing a number between 1 and 3.
+- If the player enters a letter or number that is not within the given options, they will be informed that their selection is incorrect. They will then be prompted to try again, this time choosing a number between 1 and 3.
 
 <img src="docs/features_img/continents_option.png" alt="continents">
 
