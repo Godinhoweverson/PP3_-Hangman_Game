@@ -85,6 +85,7 @@ def play_again():
             if repeat_game == 'Y':
                 print("Let's start!\n")
                 main()
+                break
             elif repeat_game == 'N':
                 print("Thank you, see you next time!\n")
                 break
