@@ -14,6 +14,7 @@ import european_countries
 # Importing the 'hangman_stages' to use when the letter is wrong.
 import hangman_stages
 
+# Importing the hang_art to use to call the welcome function.
 import hangman_art
 
 
@@ -87,16 +88,16 @@ def play_again():
             elif repeat_game == 'N':
                 print("Thank you, see you next time!\n")
                 break
-            
+
         except ValueError:
             print('Please, Y or N\n\n')
 
 
 def check_letter(word):
     # Counter for the number of correctly guessed letters
-    correct_letter_count = 0
+    correct_count = 0
     # Counter for the number of incorrectly guessed letters
-    wrong_letter_count = 6
+    wrong_count = 6
     # String to store correctly guessed letters
     correct = ''
     # String to store incorrectly guessed letters
@@ -104,7 +105,7 @@ def check_letter(word):
 
     # Continue until all letters are guessed
     # correctly or 6 wrong guesses are made
-    while correct_letter_count != len(word.replace(' ', '')) and wrong_letter_count != 0:
+    while correct_count != len(word.replace(' ', '')) and wrong_count != 0:
         display = ''
         for letter in word:
             if letter in correct:
@@ -127,11 +128,11 @@ def check_letter(word):
             # Add the correctly guessed letter to the 'correct' string
             correct += letter
             # Display the correctly guessed letters
-            print("You have entered the following letters: \n\n"f"{correct + wrong}\n\n")
-
+            print("You have entered the following letters: \n\n"
+            f"{correct + wrong}\n\n")
             # Increment the count of correct guesses
-            correct_letter_count += word.count(letter)
-            if correct_letter_count == len(word.replace(' ', '')):
+            correct_count += word.count(letter)
+            if correct_count == len(word.replace(' ', '')):
                 print("You won the game! Congratulations!\n")
                 print(f"The country is {word}\n\n")
                 play_again()
@@ -141,11 +142,12 @@ def check_letter(word):
             print('You got the letter wrong!')
             # Add the incorrectly guessed letter to the 'wrong' string
             wrong += letter
-            print("You have entered the following letters: \n\n"f"{correct + wrong}\n\n")
+            print("You have entered the following letters: \n\n"
+            f"{correct + wrong}\n\n")
             # Increment the count of wrong guesses
-            wrong_letter_count -= 1
-            print(hangman_stages.stages[wrong_letter_count])
-            if wrong_letter_count == 0:
+            wrong_count -= 1
+            print(hangman_stages.stages[wrong_count])
+            if wrong_count == 0:
                 print(f"The country was {word}\n\n")
                 print("You lost the game. Better luck next time!\n\n")
                 play_again()
@@ -157,5 +159,5 @@ def main():
     word = generate_word(option_number)
     check_letter(word)
 
-    
+
 main()
