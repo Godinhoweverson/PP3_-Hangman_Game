@@ -2,6 +2,18 @@
 
 This is a Python terminal game of the classic Hangman game. The game allows players to guess letters to uncover a hidden word. The player has a limited number of attempts to guess the word correctly before losing the game.
 
+## Table of Contents
+- [How to play](#how-to-play)
+- [Input validation and error-checking](#input-validation-and-error-checking)
+- [Flowchart](#flowchart)
+- [Features](#features)
+- [Tools & Technologies Used](#tools--technologies-used)
+- [Testing](#testing)
+- [Deployment](#deployment)
+  - [Steps for deployment](#steps-for-deployment)
+  - [Cloning](#cloning)
+- [Credits](#credits)
+
 ## How to play
 
 - In this game, you will be presented with a series of randomly generated country names. However, as a player, you have the exciting opportunity to choose a continent from three options: America, Asia, and Europe. This means you can focus your knowledge and challenge yourself specifically within the chosen continent. Get ready to test your geography skills and explore the diverse countries of your selected continent!
@@ -19,8 +31,30 @@ This is a Python terminal game of the classic Hangman game. The game allows play
 6. Play again: After winning or losing, you have the option to play again. Choose 'Y' to start a new game or 'N' to exit.
 
 
+### Input Validation and Error-Checking
+
+#### Continent Selection:
+
+- At the beginning of the game, the player is prompted to select a continent from three options: America, Asia, and Europe.
+- To make a selection, the player must enter a number between 1 and 3.
+- The game will continuously prompt the player until a valid input is provided.
+
+#### Single Letter Input:
+
+- When guessing letters, the player is required to input one letter at a time.
+- If the player attempts to input more than one letter, they will be informed and prompted to try again.
+- Only alphabetical characters are accepted; any other input is rejected.
+
+#### Play Again Prompt:
+
+- After winning or losing the game, the player is asked if they want to play again.
+- To play again, the player needs to enter 'Y'; to exit, they should enter 'N'.
+- The game will continue to prompt until a valid input ('Y' or 'N') is provided.
+
 <img src="docs/responsive_img/responsive.png" alt="hangman-responsive">
 
+## Flowchart
+<img src="docs/flowchart.png" alt="flowchart">
 
 ## Features
 
@@ -45,7 +79,6 @@ To generate a random word, the player must choose from three continent options. 
 
 - When the player types a wrong letter, a body part of the hangman will be revealed. They will have six opportunities to make mistakes, and if they exceed that limit, the game will end for the player.
 
-
 <img src="docs/features_img/head.png" alt="head">
 
 <img src="docs/features_img/torso.png" alt="torso">
@@ -58,27 +91,15 @@ To generate a random word, the player must choose from three continent options. 
 
 <img src="docs/features_img/left_leg.png" alt="leg_left">
 
-
-
-
 - The player will win the game by typing all the letters correctly. However, if the player types letter incorrectly six times, they will lose the game.
 
 <img src="docs/features_img/win_game.png" alt="win_game">
 
 <img src="docs/features_img/lost_game.png" alt="lost_game">
 
-
 - After the game is finished, a prompt will be displayed, asking the player if they would like to play again. The player can respond with 'Yes' to continue playing or 'No' to end the game.
 
 <img src="docs/features_img/play_again.png" alt="play_again">
-
-
-### Input validation and error-checking.
-
-- Enter a number between 1 and 3.
-- Enter one letter at a time.
-- Enter Y or N.
-
 
 ## Tools & Technologies Used
 
@@ -89,9 +110,9 @@ To generate a random word, the player must choose from three continent options. 
 - [CodeAnywhere](https://codeanywhere.com/) used as a cloud-based IDE for development.
 - [Am I Responsive?](https://ui.dev/amiresponsive) used to show the website on a range of devices.
 
-## Validor testing
-- PEP8
-  - No major issues.
+## Testing
+
+[Testing](/TESTING.md) 
 
 
 ## Deployment
