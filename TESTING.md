@@ -87,4 +87,74 @@ The manual testing of the Hangman game revealed that the program successfully me
 
 ## Accessibility
 
+After conducting a Lighthouse test, the accessibility score was initially at 94%, with identified issues related to insufficient contrast ratios between background and foreground colors. Addressing this concern through adjustments to the background-color has led to a significant improvement, achieving a perfect accessibility score of 100 in the desktop test and maintaining 94 in the mobile test. Furthermore, these modifications have positively impacted performance, ultimately contributing to an overall enhanced user experience.
+
+### Desktop
+<img src="docs/accessibility/lighthouse-desktop-error.jpg" alt="accessibility-test">
+
 <img src="docs/accessibility/lighthouse-desktop.jpg" alt="accessibility-test">
+
+### Mobile
+
+<img src="docs/accessibility/lighthouse-mobile.jpg" alt="accessibility-test">
+
+## Validation 
+
+#### Python
+
+##### Pep8
+
+In the process of validating the Python code using the PEP8 validator, several issues were identified:
+
+- Line Length Exceeded (E501):
+
+- Line 27: The line exceeded the recommended maximum length of 79 characters.
+Continuation Line Under-Indented for Visual Indent (E128):
+
+- Lines 28-31, 133, and 147: The continuation lines were under-indented for visual clarity.
+
+To address these issues, I have broken down the long lines into smaller, more readable segments and ensured proper indentation for continuation lines. This not only enhances code readability but also aligns with PEP8 conventions. The updated code now adheres to the recommended standards, promoting a cleaner and more consistent coding style.
+
+<img src="docs/validator/pep8-validator-errors.png" alt="pep8-validator">
+
+<img src="docs/validator/pep8-validator.png" alt="pep8-validator">
+
+#### HTML
+HTML has been validated with [W3C HTML5 Validator](https://validator.w3.org/)
+
+<img src="docs/validator/html-validator.png" alt="html-validator">
+
+#### CSS
+CSS has been validated with [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+
+<img src="docs/validator/css-validator.png" alt="css-validator">
+
+
+## Bugs
+
+In the play_again function, a bug was identified where, upon entering 'N' to close the game, the program would erroneously prompt the user twice. This issue has been successfully addressed in the updated code snippet below:
+
+<strong>
+if repeat_game == 'Y':
+    print("Let's start!\n")
+    main()
+    break
+elif repeat_game == 'N':
+    print("Thank you, see you next time!\n")
+    break
+</strong>
+
+The introduction of the break statement ensures the resolution of the problem, preventing the program from prompting the user multiple times when opting to close the game by typing 'N'. It is crucial to verify that this code snippet is embedded within an appropriate loop structure responsible for handling user input related to game repetition or closure.
+
+## Conclusion 
+
+The extensive manual testing of the Hangman game has proven to be highly successful, affirming the robustness and reliability of the program. Each testing category, from continent selection to play again functionality, was meticulously examined, and the program consistently demonstrated its ability to handle various scenarios with precision and grace.
+The program accurately generates random words from selected continents, efficiently manages correct and incorrect guesses, and provides a clear and informative user interface. The play again functionality resets the game state as expected, and the program exhibits resilience in handling edge cases, ensuring a seamless and enjoyable gaming experience.
+Moreover, the accessibility improvements achieved through Lighthouse testing reflect a commitment to inclusivity, with a perfect score of 100 on desktop and a commendable 94 on mobile, demonstrating a user-centric approach.
+The validation process, both for Python code and web technologies (HTML and CSS), reinforces adherence to best practices and standards, contributing to a clean and consistent codebase.
+While addressing a minor bug in the play_again function, the program now ensures a smooth closure without redundant prompts, further enhancing the overall user experience.
+In conclusion, the PP3 Hangman game has undergone rigorous testing, resulting in a well-crafted and dependable application that offers users an engaging and error-free gaming experience.
+
+
+
+

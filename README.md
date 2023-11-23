@@ -108,11 +108,12 @@ To generate a random word, the player must choose from three continent options. 
 - [GitHub](https://github.com) used for secure online code storage.
 - [Heroku](https://heroku.com) for deployment of the project.
 - [CodeAnywhere](https://codeanywhere.com/) used as a cloud-based IDE for development.
+- [responsive design checker](https://responsivedesignchecker.com/) used to visualize how the website appears across various devices and screen sizes.
 - [Am I Responsive?](https://ui.dev/amiresponsive) used to show the website on a range of devices.
 
 ## Testing
 
-[Testing](/TESTING.md) 
+[The full testing documentation can be found in TESTING.md](/TESTING.md) 
 
 
 ## Deployment
