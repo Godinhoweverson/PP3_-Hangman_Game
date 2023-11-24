@@ -43,7 +43,7 @@ The testing phase for the Hangman game focused on ensuring the correctness and r
 | Test |Result  |
 |--|--|
 |Guess incorrect letters in the word.|Pass|
-|Confirm that the program updates the display with underscores and hangman stages.|Pass|
+|Confirm that the program updates the display with hangman stages.|Pass|
 |Verify that the incorrect letters are added to the 'wrong' string.|Pass|
 |Ensure that the program counts the incorrect guesses correctly.|Pass|
 
@@ -96,7 +96,7 @@ After conducting a Lighthouse test, the accessibility score was initially at 94%
 
 ### Mobile
 
-<img src="docs/accessibility/lighthouse-mobile.jpg" alt="accessibility-test">
+<img src="docs/accessibility/lighthouse-mobile.png" alt="accessibility-test">
 
 ## Validation 
 
@@ -132,19 +132,28 @@ CSS has been validated with [W3C CSS Validator](https://jigsaw.w3.org/css-valida
 
 ## Bugs
 
-In the play_again function, a bug was identified where, upon entering 'N' to close the game, the program would erroneously prompt the user twice. This issue has been successfully addressed in the updated code snippet below:
+#### play_again function
+- In the play_again function, a bug was identified where, upon entering 'N' to close the game, the program would erroneously prompt the user twice. This issue has been successfully addressed in the updated code snippet below:
 
 <strong>
-if repeat_game == 'Y':
-    print("Let's start!\n")
-    main()
-    break
-elif repeat_game == 'N':
-    print("Thank you, see you next time!\n")
+if repeat_game == 'Y':<br>
+    print("Let's start!\n")<br>
+    main()<br>
+    break<br>
+elif repeat_game == 'N':<br>
+    print("Thank you, see you next time!\n")<br>
     break
 </strong>
 
 The introduction of the break statement ensures the resolution of the problem, preventing the program from prompting the user multiple times when opting to close the game by typing 'N'. It is crucial to verify that this code snippet is embedded within an appropriate loop structure responsible for handling user input related to game repetition or closure.
+
+#### Application Not Functioning Properly After Deployment
+- After deploying the application, it was not functioning properly. Upon inspecting the logs, I identified the presence of ERROR H14. This error indicated that the Eco Dynos were not activated. To resolve this issue, I promptly activated the dynos, and the application resumed normal operation.
+
+#### Unable to Create New Workspace Using CodeAnywhere
+Upon attempting to create a new workspace using CodeAnywhere, the process failed, and I was unable to establish the desired workspace. After encountering this issue, I opted to switch to Gitpod, where I successfully created the workspace without any further impediments.
+
+<img src="docs/codeanywhere.jpeg" alt="bug-codeanywhere">
 
 ## Conclusion 
 

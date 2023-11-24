@@ -2,11 +2,14 @@
 
 This is a Python terminal game of the classic Hangman game. The game allows players to guess letters to uncover a hidden word. The player has a limited number of attempts to guess the word correctly before losing the game.
 
+Access the fully deployed project can be accessed through this  [link](https://pp3-hangman-game-godinho-a0dc3a581f52.herokuapp.com/)
+
 ## Table of Contents
 - [How to play](#how-to-play)
 - [Input validation and error-checking](#input-validation-and-error-checking)
 - [Flowchart](#flowchart)
 - [Features](#features)
+- [Imported Libraries](Imported-Libraries)
 - [Tools & Technologies Used](#tools--technologies-used)
 - [Testing](#testing)
 - [Deployment](#deployment)
@@ -101,6 +104,20 @@ To generate a random word, the player must choose from three continent options. 
 
 <img src="docs/features_img/play_again.png" alt="play_again">
 
+## Imported Libraries
+
+- random
+Python's built-in random module is used for generating random choices, which is crucial for selecting a random country from the chosen continent.
+
+- american_countries, asian_countries, european_countries
+Custom modules containing lists of countries from continents. These lists are used to randomly select a country for the Hangman game based on the player's chosen continent.
+
+- hangman_stages
+A custom module containing ASCII art representations of the different stages of the Hangman game. These stages are displayed as the player makes incorrect guesses, adding a visual element to the game.
+
+- hangman_art
+A custom module containing ASCII art for the word "Hangman" and a welcome message. This module is responsible for displaying the game's welcome message and instructions.
+
 ## Tools & Technologies Used
 
 - [Python](https://www.python.org/) was used to create this project.
@@ -108,12 +125,11 @@ To generate a random word, the player must choose from three continent options. 
 - [GitHub](https://github.com) used for secure online code storage.
 - [Heroku](https://heroku.com) for deployment of the project.
 - [CodeAnywhere](https://codeanywhere.com/) used as a cloud-based IDE for development.
-- [responsive design checker](https://responsivedesignchecker.com/) used to visualize how the website appears across various devices and screen sizes.
 - [Am I Responsive?](https://ui.dev/amiresponsive) used to show the website on a range of devices.
 
 ## Testing
 
-[The full testing documentation can be found in TESTING.md](/TESTING.md) 
+The full testing documentation can be found in [TESTING.md](/TESTING.md) 
 
 
 ## Deployment
