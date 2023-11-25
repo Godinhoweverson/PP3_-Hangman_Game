@@ -44,7 +44,7 @@ The testing phase for the Hangman game focused on ensuring the correctness and r
 |--|--|
 |Guess incorrect letters in the word.|Pass|
 |Confirm that the program updates the display with hangman stages.|Pass|
-|Verify that the incorrect letters are added to the 'wrong' string.|Pass|
+|Verify that the incorrect letters are displayed for the users to know which letter they've typed.|Pass|
 |Ensure that the program counts the incorrect guesses correctly.|Pass|
 
 ### Test game outcomes
@@ -83,20 +83,22 @@ The testing phase for the Hangman game focused on ensuring the correctness and r
 
 ## Conclusion
 
-The manual testing of the Hangman game revealed that the program successfully meets its intended functionality. It accurately handles user inputs, generates random words from selected continents, and effectively manages correct and incorrect guesses. The user interface was found to be clear and informative, providing appropriate feedback throughout the game. The play again functionality resets the game state as expected, and the program gracefully handles various edge cases. Overall, the testing process ensures a reliable and enjoyable gaming experience for users interacting with the Hangman program.
+The manual testing of the Hangman game revealed that the program successfully meets its intended functionality. It accurately handles user inputs, generates random words from selected continents, and effectively manages correct and incorrect guesses. The user interface was found to be clear and informative, providing appropriate feedback throughout the game. The play again functionality resets the game state as expected, and the program gracefully handles various edge cases. Overall, the testing process ensures a reliable and enjoyable gaming experience for users interacting with the Hangman game.
 
 ## Accessibility
 
-After conducting a Lighthouse test, the accessibility score was initially at 94%, with identified issues related to insufficient contrast ratios between background and foreground colors. Addressing this concern through adjustments to the background-color has led to a significant improvement, achieving a perfect accessibility score of 100 in the desktop test and maintaining 94 in the mobile test. Furthermore, these modifications have positively impacted performance, ultimately contributing to an overall enhanced user experience.
+After conducting a Lighthouse test, the accessibility score was initially at 94%, with identified issues related to insufficient contrast ratios between background and foreground colors. Addressing this concern through adjustments to the background-color has led to a significant improvement, achieving a perfect accessibility score of 100. Furthermore, these modifications have positively impacted performance, ultimately contributing to an overall enhanced user experience.
 
 ### Desktop
 <img src="docs/accessibility/lighthouse-desktop-error.jpg" alt="accessibility-test">
 
-<img src="docs/accessibility/lighthouse-desktop.jpg" alt="accessibility-test">
+<img src="docs/accessibility/lighthouse-desktop.png" alt="accessibility-test">
 
 ### Mobile
 
-<img src="docs/accessibility/lighthouse-mobile.png" alt="accessibility-test">
+<img src="docs/accessibility/lighthouse-mobile-error.png" alt="accessibility-test">
+
+<img src="docs/accessibility/lighthouse-mobile.jpeg" alt="accessibility-test">
 
 ## Validation 
 
@@ -151,18 +153,17 @@ The introduction of the break statement ensures the resolution of the problem, p
 - After deploying the application, it was not functioning properly. Upon inspecting the logs, I identified the presence of ERROR H14. This error indicated that the Eco Dynos were not activated. To resolve this issue, I promptly activated the dynos, and the application resumed normal operation.
 
 #### Unable to Create New Workspace Using CodeAnywhere
-Upon attempting to create a new workspace using CodeAnywhere, the process failed, and I was unable to establish the desired workspace. After encountering this issue, I opted to switch to Gitpod, where I successfully created the workspace without any further impediments.
+- Upon attempting to create a new workspace using CodeAnywhere, the process failed, and I was unable to establish the desired workspace. After encountering this issue, I opted to switch to Gitpod, where I successfully created the workspace without any further impediments.
 
 <img src="docs/codeanywhere.jpeg" alt="bug-codeanywhere">
 
 ## Conclusion 
-
-The extensive manual testing of the Hangman game has proven to be highly successful, affirming the robustness and reliability of the program. Each testing category, from continent selection to play again functionality, was meticulously examined, and the program consistently demonstrated its ability to handle various scenarios with precision and grace.
-The program accurately generates random words from selected continents, efficiently manages correct and incorrect guesses, and provides a clear and informative user interface. The play again functionality resets the game state as expected, and the program exhibits resilience in handling edge cases, ensuring a seamless and enjoyable gaming experience.
-Moreover, the accessibility improvements achieved through Lighthouse testing reflect a commitment to inclusivity, with a perfect score of 100 on desktop and a commendable 94 on mobile, demonstrating a user-centric approach.
-The validation process, both for Python code and web technologies (HTML and CSS), reinforces adherence to best practices and standards, contributing to a clean and consistent codebase.
-While addressing a minor bug in the play_again function, the program now ensures a smooth closure without redundant prompts, further enhancing the overall user experience.
-In conclusion, the PP3 Hangman game has undergone rigorous testing, resulting in a well-crafted and dependable application that offers users an engaging and error-free gaming experience.
+The comprehensive manual testing of the Hangman game has demonstrated the robustness and accuracy of its functionalities. The game effectively handles various scenarios, such as continent selection, word generation, letter input, correct and incorrect guesses, and game outcomes. The user interface provides clear feedback, contributing to a positive gaming experience.
+The play again functionality successfully resets the game state as intended, allowing users to start a new game or exit gracefully. The program exhibits reliability in handling edge cases, ensuring that it accepts valid inputs, rejects invalid inputs, and provides appropriate messages in different situations.
+The accessibility testing revealed an initial score of 94%, with identified contrast ratio issues. After addressing these concerns, the accessibility score improved to a perfect 100%. The adjustments not only enhanced accessibility but also positively impacted overall performance, contributing to an improved user experience on both desktop and mobile platforms.
+In the validation phase, the Python code was reviewed and validated using the PEP8 validator. Identified issues related to line length and indentation were successfully addressed, aligning the code with recommended standards. The HTML and CSS were validated using W3C validators, ensuring compliance with respective standards.
+Several bugs were identified and addressed during the testing phase. Notably, the play_again function was modified to prevent double prompting when closing the game. Additionally, the application's post-deployment issue was resolved by activating the Eco Dynos. The challenge in creating a workspace using CodeAnywhere was overcome by switching to Gitpod, where the workspace creation was successful.
+In summary, the Hangman game has undergone thorough testing, validation, and bug resolution, resulting in a reliable and enjoyable gaming application.
 
 
 

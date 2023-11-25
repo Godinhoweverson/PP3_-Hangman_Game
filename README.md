@@ -9,7 +9,7 @@ Access the fully deployed project can be accessed through this  [link](https://p
 - [Input validation and error-checking](#input-validation-and-error-checking)
 - [Flowchart](#flowchart)
 - [Features](#features)
-- [Imported Libraries](Imported-Libraries)
+- [Imported Libraries](#imported-libraries)
 - [Tools & Technologies Used](#tools--technologies-used)
 - [Testing](#testing)
 - [Deployment](#deployment)
@@ -57,6 +57,7 @@ Access the fully deployed project can be accessed through this  [link](https://p
 <img src="docs/responsive_img/responsive.png" alt="hangman-responsive">
 
 ## Flowchart
+I utilized [Lucid](https://www.lucidchart.com/) to create the flowchart, leveraging its capabilities to enhance the overall structure.
 <img src="docs/flowchart.png" alt="flowchart">
 
 ## Features
@@ -124,7 +125,7 @@ A custom module containing ASCII art for the word "Hangman" and a welcome messag
 - [Git](https://git-scm.com) used for version control. (`git add`, `git commit`, `git push`)
 - [GitHub](https://github.com) used for secure online code storage.
 - [Heroku](https://heroku.com) for deployment of the project.
-- [CodeAnywhere](https://codeanywhere.com/) used as a cloud-based IDE for development.
+- [CodeAnywhere](https://codeanywhere.com/) & [Gitpod](https://www.gitpod.io/) used as a cloud-based IDE for development.
 - [Am I Responsive?](https://ui.dev/amiresponsive) used to show the website on a range of devices.
 
 ## Testing
@@ -159,7 +160,8 @@ You can clone the repository by following these steps:
 Alternatively, if using Codeanywhere, you can click below to create your own workspace using this repository.
 
 [Open in Codeanywhere](https://app.codeanywhere.com/workspace/create#https://github.com/Godinhoweverson/PP3_-Hangman_Game)
-
+Or
+[Open in Codeanywhere](https://gitpod.io/workspaces)
 
  ### Credits
 
