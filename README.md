@@ -157,11 +157,9 @@ You can clone the repository by following these steps:
 	- `https://github.com/Godinhoweverson/PP3_-Hangman_Game.git`
 7. Press Enter to create your local clone.
 
-Alternatively, if using Codeanywhere, you can click below to create your own workspace using this repository.
+Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
 
-[Open in Codeanywhere](https://app.codeanywhere.com/workspace/create#https://github.com/Godinhoweverson/PP3_-Hangman_Game)
-Or
-[Open in Codeanywhere](https://gitpod.io/workspaces)
+[Gitpod](https://gitpod.io/workspaces)
 
  ### Credits
 
